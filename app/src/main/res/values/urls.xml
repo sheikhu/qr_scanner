@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="url_fetch_user">http://192.168.1.11:8080/qr/public/users/%1$s"</string>
+    <string name="url_auth">http://192.168.1.11:8080/qr/public/auth"</string>
+</resources>
