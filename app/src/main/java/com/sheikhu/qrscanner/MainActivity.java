@@ -69,6 +69,7 @@ public class MainActivity extends ActionBarActivity {
                 Log.i("qr_code_scanned", identifier);
                 String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
 
+                Toast.makeText(MainActivity.this, identifier+"#"+format, Toast.LENGTH_LONG).show();
                 TextView tv = (TextView) findViewById(R.id.text_view);
 
 
@@ -109,13 +110,13 @@ public class MainActivity extends ActionBarActivity {
                                     try {
                                         if(response.getString("status").equals("success"))
                                         {
-                                            Toast.makeText(getApplicationContext(), "Authentication successfully !", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(MainActivity.this, "Authentication successfully !", Toast.LENGTH_LONG).show();
                                             statusLoginElements(View.GONE);
                                             label_status.setVisibility(View.VISIBLE);
 
                                         }
                                         else
-                                            Toast.makeText(getApplicationContext(), "Authentication failed !", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(MainActivity.this, "Authentication failed !", Toast.LENGTH_LONG).show();
                                     } catch (JSONException e) {
                                         e.printStackTrace();
                                     }
